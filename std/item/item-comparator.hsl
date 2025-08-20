@@ -1,0 +1,10 @@
+// Represents a target of an item search.
+// 
+// see [hasItem](/std/conditions#hasItem)
+enum ItemComparator {
+    // Check that the item only matches the same type.
+    ItemType,
+
+    // Check the item has the same metadata.
+    Metadata
+}

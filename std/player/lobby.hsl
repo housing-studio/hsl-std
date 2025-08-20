@@ -1,0 +1,22 @@
+enum Lobby {
+    Main,
+    TournamentHall,
+    BlitzSG,
+    TheTNTGames,
+    MegaWalls,
+    ArcadeGames,
+    CopsAndCrims,
+    UHCChampions,
+    Warlords,
+    SmashHeroes,
+    Housing,
+    SkyWars,
+    SpeedUHC,
+    ClassicGames,
+    Prototype,
+    BedWars,
+    MurderMystery,
+    BuildBattle,
+    Duels,
+    WoolWars
+}

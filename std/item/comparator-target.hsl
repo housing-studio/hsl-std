@@ -1,0 +1,25 @@
+// Represents a filter for player inventory slots, where an item should be searched for.
+//
+// see [hasItem](/std/conditions#hasItem)
+enum ComparatorTarget {
+    // Only check for the item in the player's hand.
+    Hand,
+
+    // Only check for the item in the player's armor slots.
+    Armor,
+
+    // Only check for the item in the player's hotbar.
+    Hotbar,
+
+    // Only check for the item in the player's inventory, excludes armor slots.
+    Inventory,
+
+    // Only check for the item on the player's cursor.
+    Cursor,
+
+    // Only check for the item in the playser's 2x2 crafting grid.
+    CraftingGrid,
+
+    // Check for the item anywhere on the player.
+    Anywhere
+}

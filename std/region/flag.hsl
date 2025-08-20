@@ -1,0 +1,13 @@
+enum Flag {
+    Pvp,
+    DoubleJump,
+    FireDamage,
+    FallDamage,
+    PoisonDamage,
+    Suffocation,
+    Hunger,
+    NaturalRegeneration,
+    DeathMessages,
+    InstantRespawn,
+    KeepInventory
+}

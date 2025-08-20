@@ -1,0 +1,86 @@
+// Requires players to match the specified group (or higher if set).
+//
+// * `group` - the name of the group to check
+// * `higher` - whether to check for groups higher than the specified group
+fn hasGroup(group: string, higher: bool = false) -> bool
+
+// Requires players to match the provided comparator for the provided variable.
+//
+// * `namespace` - the namespace of the variable
+// * `variable` - the unique identifier of the variable
+// * `value` - the value to compare with the variable
+// * `comparator` - the comparator operator to compare the variable and the value with
+// * `fallback` - the value to use instead of the variable, if the variable is not set
+fn compareVariable(
+    namespace: Namespace, variable: string, value: any, comparator: Comparator = Comparator::Equal, fallback: any = null,
+) -> bool
+
+// Requires players to have a specific permission.
+//
+// * `permission` - the permission to check
+fn hasPermission(permission: Permission) -> bool
+
+// Requires the location to be within the selected region.
+//
+// * `region` - the name of the region to check
+fn withinRegion(region: string) -> bool
+
+// Requires the player to have the provided item and match the required cases.
+//
+// * `item` - the type of item to be checked
+// * `comparator` - the behaviour of the item check
+// * `target` - the target on the inventory to check for
+// * `amount` - the required amount of the material
+fn hasItem(
+    item: Material, comparator: ItemComparator = ItemComparator::Metadata, target: ComparatorTarget = ComparatorTarget::Anywhere, 
+    amount: ComparatorAmount = ComparatorAmount::Any
+) -> bool
+
+// Requires players to be currently doing parkour.
+fn doingParkour() -> bool
+
+// Requires players to have the provided potion effect.
+//
+// * `effect` - the kind of the effect to check for
+fn hasEffect(effect: Effect) -> bool
+
+// Requires the player to be currently sneaking.
+fn isSneaking() -> bool
+
+// Requires the player to be currently flying.
+fn isFlying() -> bool
+
+// Compare against a players current health level.
+//
+// * `health` - the required amount of health
+// * `comparator` - the comparator for the player's health and required value
+fn hasHealth(health: int, comparator: Comparator = Comparator::Equal) -> bool
+
+// Compare against a players max health level.
+//
+// * `maxHealth` - the required amount of maximum health
+// * `comparator` - the comparator for the player's maximum health and required value
+fn hasMaxHealth(maxHealth: int, comparator: Comparator = Comparator::Equal) -> bool
+
+// Compare against a players current hunger level.
+//
+// * `level` - the required amount of hunger level
+// * `comparator` - the comparator for the player's hunger level and required value
+fn hasHunger(level: int, comparator: Comparator = Comparator::Equal) -> bool
+
+// Requires players to be a specific game mode.
+//
+// * `gameMode` - the required game mode
+fn hasGameMode(gameMode: GameMode) -> bool
+
+// Requires a number placeholder to match the provided condition.
+//
+// * `placeholder` - the name of the placeholder to compare
+// * `value` - the value to compare to
+// * `comparator` - the comparator for the placeholder value and required value
+fn comparePlaceholder(placeholder: string, value: any, comparator: Comparator = Comparator::Equal) -> bool
+
+// Requires players to match the required team.
+//
+// * `team` - the name of the team to check
+fn hasTeam(team: string) -> bool

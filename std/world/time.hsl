@@ -1,0 +1,20 @@
+// Represents a clientside player world time.
+enum Time {
+    // Synchonize the player's time to the world's current time.
+    World,
+
+    // Set the player's world time to sunrise.
+    Sunrise,
+    
+    // Set the player's world time to noon.
+    Noon,
+
+    // Set the player's world time to sunset.
+    Sunset,
+
+    // Set the player's world time to midnight.
+    Midnight,
+
+    // Set the player's world time to an arbitrary time measured in ticks.
+    Custom(worldTicks: int)
+}

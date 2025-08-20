@@ -1,0 +1,218 @@
+fn conditional(conditions: []Condition, matchAny: bool = false, ifActions: []Action = [], elseActions: []Action = [])
+
+// Change the group of the player.
+//
+// * `group` - the name of the group to change to
+// * `protection` - whether to prevent demoting the group to a lower one
+fn setGroup(group: string, protection: bool = true)
+
+// Kill the player.
+fn kill()
+
+// Set the health of the player to the full scale.
+fn heal()
+
+// Display large texts as title and subtitle for the player.
+//
+// * `title` - the title message
+// * `subtitle` - the subtitle message
+// * `fadein` - the animation duration for the text to appear (in seconds)
+// * `fadein` - the animation duration for the text to stay visible (in seconds)
+// * `fadeout` - the animation duration for the text to disappear (in seconds)
+fn title(title: string, subtitle: string = "", fadein: int = 1, stay: int = 5, fadeout: int = 1)
+
+// Display a small text above the hotbar for the player.
+//
+// * `message` - the message to display
+fn actionbar(message: string)
+
+// Reset the inventory of the player.
+//
+// If no layout is set, the player's inventory is cleared.
+// Otherwise the layout is applied again.
+fn resetInventory()
+
+// Update the maximum health of the player.
+//
+// * `maxHealth` - the new maximum health of the player (between 1 and 20)
+// * `mode` - the mode to modify the player's current health
+// * `healOnChange` - whether to start healing the player if the new maximum health is higher
+fn changeMaxHealth(maxHealth: int = 20, mode: Mode = Mode::Set, healOnChange: bool = true)
+
+// Teleports the player back to the last parkour checkpoint.
+// Teleports them to the start if they are not currently in the parkour.
+fn parkourCheckpoint()
+
+// Add an item to the player's inventory.
+//
+// * `item` - the type of the item to add
+// * `allowMultiple` - whether to allow obtaining multiple items of the same kind
+// * `slot` - the slot of the inventory to add the item to
+// * `replace` - whether to attempt to replace an existing item in the inventory for the same kind
+fn giveItem(item: Material, allowMultiple: bool = false, slot: Slot = Slot::FirstAvailable, replace: bool = false)
+
+// Remove an item from the player's inventory.
+// 
+// * `item` - the type of the item to remove
+fn removeItem(item: Material)
+
+// Send a chat message to the player.
+// The message will be prefixed with a star character.
+//
+// * `message` - the message to be displayed
+fn chat(message: string)
+
+// Add a potion effect to the player.
+//
+// * `effect` - the kind of the effect to apply
+// * `effect` - the duration of the effect to remain (in seconds)
+// * `level` - the amplifier of the effect
+// * `override` - whether to override an existing effect of the same kind
+// * `showIcon` - whether to show the potion icon in the top right of the Minecraft client for players in 1.9 or later
+fn addEffect(effect: Effect, duration: int = 60, level: int = 1, override: bool = false, showIcon: bool = true)
+
+// Clear all potions effects of the player.
+fn clearEffects()
+
+// Add experience levels to the player.
+//
+// * `levels` - the amount of levels to be added
+fn addExperience(levels: int = 1)
+
+// Send the player to the lobby.
+//
+// * `lobby` - the type of lobby to send the player to
+fn sendToLobby(lobby: Lobby = Lobby::Housing)
+
+// Modify a variable based on the provided placeholder, operation, and value.
+//
+// * `namespace` - the namespace of the variable
+// * `variable` - the unique identifier of the variable
+// * `mode` - the mode of the variable change
+// * `value` - the value of the variable change
+// * `autoUnset` - whether to eventually automatically unset the variable
+fn changeVariable(namespace: Namespace, variable: string, mode: Mode::Set = Mode::Set, value: any = 1, autoUnset: bool = false)
+
+// Teleport the player to the specified location.
+//
+// * `location` - the location to teleport to
+// * `prevent` - whether to prevent teleporting into the inside of solid blocks
+fn teleport(location: Location, prevent: bool = false)
+
+// End the player's current parkour run with a provided reason.
+//
+// * `reason` - the reason why the parkour is failed
+fn failParkour(reason: string = "Failed!")
+
+// Play a sound with a custom pitch to the player.
+//
+// * `sound` - the type of the sound to play
+// * `volume` - the volume of the sound to be played
+// * `pitch` - the pitch of the sound to be played
+// * `location` - the location of the sound to be played at
+fn playSound(sound: Sound, volume: float = 0.7, pitch: float = 1.0, location: Location = Location::Invoker)
+
+// Set the target location of the compass for a player.
+//
+// * `location` - the new target of the compass
+fn setCompassTarget(location: Location)
+
+// Set the game ode of the player.
+//
+// * `gameMode` - the new game mode of the player
+fn setGameMode(gameMode: GameMode)
+
+// Set the health of the player.
+//
+// * `health` - the value of the health change
+// * `mode` - the mode of the health change
+fn changeHealth(health: int = 20, mode: Mode = Mode::Set)
+
+// Set the hunger level of the player.
+//
+// * `hunger` - the value of the hunger level change
+// * `mode` - the mode of the hunger level change
+fn changeHunger(hunger: int = 20, mode: Mode = Mode::Set)
+
+fn randomAction(actions: []Action) // TODO
+
+// Trigger the specified function for the given target.
+//
+// * `function` - the function to be triggered
+// * `target` - the target that the function is triggered for
+fn triggerFunction(function: string, target: Target)
+
+// Apply an inventory layout for the player.
+//
+// * `layout` - the layout to apply
+fn applyInventoryLayout(layout: string)
+
+// Enchant the held item of the player.
+//
+// * `enchant` - the enchantment to apply
+// * `level` - the level of the enchantment
+fn enchantHeldItem(enchant: Enchant, level: int = 1)
+
+// Pause the execution of the remaining actions for the specified amount of ticks.
+//
+// * `ticks` - the duration to pause the execution for
+fn sleep(ticks: int = 20)
+
+// Set the team of the player.
+//
+// * `team` - the name of the team to apply
+fn setTeam(team: string)
+
+// Drops an item at a specific location.
+//
+// * `item` - the type of item to be dropped
+// * `location` - the location of the item to drop
+// * `naturally` - when enabled, the item will be dropped naturally in the world, having some slight randomness to its location
+// * `disableMerging` - whether to disable dropped items from merging
+// * `prioritizePlayers` - when enabled, the player the action is executed on will be prioritized for picking up the item
+// * `fallbackToInventory` - when enabled, items will be put into the player inventory if they cannot be dropped in the world
+fn dropItem(
+    item: Material, location: Location, naturally: bool = true, disableMerging: bool = false, prioritizePlayers: bool = false, 
+    fallbackToInventory: bool = false
+)
+
+// Change the direction of the player.
+//
+// * `velocity` - the components of the new velocity
+fn changeVelocity(velocity: Vector = Vector::new(10, 10, 10))
+
+// Launch the player in the general direction of the provided location.
+//
+// * `location` - the location to launch towards
+// * `strength` - the strenth of the launch
+fn launchToTarget(location: Location, strength: int = 2)
+
+// Change the weather for this player, this will result in the weather being different then the world while set.
+//
+// * `weather` - the weather to be applied for the player
+fn setPlayerWeather(weather: Weather)
+
+// Set the time of the world for the provided player.
+//
+// * `time` - the world time to be applied for the player
+fn setPlayerTime(time: Time = Time::World)
+
+// Toggle whether the players nametag is shown or hidden to other players in the house above the player.
+//
+// * `enabled` - whether the player nametags should be shown
+fn toggleNameTagDisplay(shown: bool)
+
+// Cancel the execution of an event.
+// Only applies to a subset of events.
+fn cancelEvent() // TODO
+
+// Display the specified menu for the player.
+//
+// * `menu` - the name of the menu to display
+fn openMenu(menu: string)
+
+// Close the currently open menu of the player.
+fn closeMenu()
+
+// Stops executing the remaining actions.
+fn exit()

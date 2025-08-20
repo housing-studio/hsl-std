@@ -1,0 +1,7 @@
+enum Comparator {
+    LessThan,
+    LessThanOrEqual,
+    Equal,
+    GreaterThanOrEqual,
+    GreaterThan
+}

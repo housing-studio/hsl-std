@@ -1,0 +1,26 @@
+// see [enchantHeldItem](/std/actions#enchantHeldItem)
+enum Enchant {
+    Protection,
+    FireProtection,
+    FeatherFalling,
+    BlastProtection,
+    ProjectileProtection,
+    Respiration,
+    AquaAffinity,
+    Thorns,
+    DepthStrider,
+    Sharpness,
+    Smite,
+    BaneOfArthropods,
+    Knockback,
+    FireAspect,
+    Looting,
+    Efficiency,
+    SilkTouch,
+    Unbreaking,
+    Fortune,
+    Power,
+    Punch,
+    Flame,
+    Infinity
+}

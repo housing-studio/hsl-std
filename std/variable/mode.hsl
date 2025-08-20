@@ -1,0 +1,7 @@
+enum Mode {
+    Set,
+    Increment,
+    Decrement,
+    Multiply,
+    Divide
+}

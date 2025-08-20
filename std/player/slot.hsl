@@ -1,0 +1,49 @@
+// Represents a type that specifies which slot of the player's inventory should an item be added.
+// 
+// see [giveItem](/std/actions#giveItem)
+enum Slot {
+    // Give an item to the helmet armor slot of the player.
+    // 
+    // Slot value `39`.
+    Helmet,
+
+    // Give an item to the chesplate armor slot of the player.
+    //
+    // Slot value `38`.
+    Chestplate,
+
+    // Give an item to the leggings armor slot of the player.
+    //
+    // Slot value `37`.
+    Leggins,
+
+    // Give an item to the boots armor slot of the player.
+    //
+    // Slot value `36`.
+    Boots,
+
+    // Give an item to the first slot in the player's inventory that is empty or contains the same type of item.
+    //
+    // Slot value `-1`.
+    FirstAvailable,
+
+    // Give an item to the main hand slot of the player.
+    //
+    // Slot value `-2`.
+    Hand,
+
+    // Give an item to an arbitrary slot of the player's total inventory, including armor and hotbar.
+    //
+    // Specify the raw (zero indexed) Minecraft slot number, or use a number placeholder.
+    Custom(rawSlot: int),
+
+    // Give an item to the inventory of the player, exluding armor and hotbar.
+    //
+    // Slot value range from `1` to `27`, inclusive..
+    Inventory(inventorySlot: int),
+
+    // Give an item to the hotbar of the player.
+    //
+    // Slot value range from `1` to `9`, inclusive.
+    Hotbar(hotbarSlot: int)
+}

@@ -1,0 +1,73 @@
+struct Region {
+    // The unique name of the region.
+    name: string
+
+    // The post1 selection of the region area.
+    from: Vector
+
+    // The post2 selection of the region area
+    to: Vector
+  
+    // The pvp settings applicable for players within the region.
+    pvpSettings: PvpSettings
+
+    // The list of actions to invoke upon region entry.
+    //
+    // May not trigger when teleporting into the region.
+    entryActions: []Action
+
+    // The list of actions to invoke upon region exit.
+    exitActions: []Action
+}
+
+// if a setting is enabled, then the region will force enable the flag
+// if a setting is disabled, then the region will force disable the flag
+// if a setting is unset, then the global/parent flag will be used
+// by default all settings are unset
+struct PvpSettings {
+    // Whether to allow PvP or taking damage in general.
+    pvpOrDamage?: Property = Property::Unset
+
+    // Whether to allow double jumping.
+    doubleJump: Property = Property::Unset
+
+    // Whether to allow fire to cause damage.
+    fireDamage: Property = Property::Unset
+
+    // Whether to allow damage when falling from high ground.
+    //
+    // Fall damage is not applied to players with flight or double jump enabled.
+    fallDamage: Property = Property::Unset
+
+    // Whether to allow poison or wither damage.
+    poisonOrWitherDamage: Property = Property::Unset
+
+    // Whether to allow suffocation damage.
+    suffocation: Property = Property::Unset
+
+    // Whether to allow hunger reduction caused by sprinting or taking damage.
+    hunger: Property = Property::Unset
+
+    // Whether to allow natural regeneration.
+    naturalRegeneration: Property = Property::Unset
+
+    // Whether to print kill and death messages.
+    killAndDeathMessages: Property = Property::Unset
+
+    // Whether to allow instant respawning upon death.
+    instantRespawn: Property = Property::Unset
+
+    // Whether to keep the contents of the player inventory upon death.
+    keepInventory: Property = Property::Unset
+}
+
+enum Property {
+    // Forcefully enable the property.
+    Enable,
+
+    // Forcefully disable to property.
+    Disable,
+
+    // Do not specify the property for this region, allowing other colliding regions to specify this rule.
+    Unset
+}

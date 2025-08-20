@@ -1,0 +1,11 @@
+// Represent a condition for counting matching items.
+//
+// see [hasItem](/std/conditions#hasItem)
+enum ComparatorAmount {
+    // Comparator evaluates to true if any amount of items match the condition.
+    Any,
+
+    // Comparator evaluate to true if the amount of matched items are greater or equal to the amount 
+    // of the item specified in the condition.
+    GreaterOrEqual
+}

@@ -1,0 +1,56 @@
+// Represents a group of actions to be invoked against an online player.
+//
+// # Example usage:
+// ```hsl
+// @description("This is a function description.")
+// @icon(Material::Stone)
+// @loop(10s)
+// fn myFunction() {
+//     stat player myStat: int
+//     myStat++
+// 
+//     myOtherFunction()
+// }
+// ```
+@allow(description, icon, loop)
+struct Function {
+    // The exposed unique name of the function.
+    name: string
+
+    // The short description for the function.
+    description?: string = ""
+
+    // The icon of the function that is displayed on the systems menu.
+    icon?: Material = null
+
+    // Functions can be enabled to automatically execute for all players in the house every X amount of ticks.
+    // 
+    // For example: 1 second is 20 ticks.
+    // 
+    // If null, then looping is disabled.
+    automaticExecution:? int = null
+}
+
+// Represents an annotation that sets the short description of a function.
+@expose("description")
+struct FunctionDescription(description: string) : Annotation<Function> {
+    fn apply(f: Function) {
+        f.description = description
+    }
+}
+
+// Represents an annotation that sets the icon of the function that is displayed in the systems menu.
+@expose("icon")
+struct FunctionIcon(icon: Material) : Annotation<Function> {
+    fn apply(f: Function) {
+        f.icon = icon
+    }
+}
+
+// Represents an annotation that enables the function to loop automatically for each players at the specified interval.
+@expose("loop")
+struct FunctionLoop(ticks: int) : Annotation<Function> {
+    fn apply(f: Function) {
+        f.automaticExecution = ticks
+    }
+}

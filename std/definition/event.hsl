@@ -1,0 +1,110 @@
+// Represents a group of housing event actions.
+//
+// # Example usage
+// ```hsl
+// event join() {
+//     chat("welcome to my house")
+// }
+// ```
+struct Event {
+    // The type of event to listen for.
+    type: EventType
+
+    // The list of events to invoke when the event is triggered.
+    actions: []Action
+}
+
+// Represents a wrapper for all housing event types.
+enum EventType {
+    // Executes when a player joins the house.
+    //
+    // Alias for event `join`.
+    PlayerJoin,
+
+    // Executes when a player leaves the house.
+    //
+    // Alias for event `quit`.
+    PlayerQuit,
+
+    // Executes when a player dies.
+    //
+    // Alias for event `death`.
+    PlayerDeath,
+
+    // Executes for a player when they kill another player.
+    //
+    // Alias for event `kill`.
+    PlayerKill,
+
+    // Executes when a player respawns.
+    //
+    // Alias for event `respawn`.
+    PlayerRespawn,
+
+    // Executes when a players group changes.
+    //
+    // Alias for event `groupChange`.
+    GroupChange,
+
+    // Executes when a player has their PvP state change, such as changing between regions.
+    //
+    // Alias for event `pvpStateChange`.
+    PvpStateChange,
+
+    // Executes when a player catches a fish while fishing.
+    //
+    // Alias for event `fishCaught`.
+    FishCaught,
+
+    // Executes when a player uses a nether or end portal.
+    //
+    // Alias for event `enterPortal`.
+    PlayerEnterPortal,
+
+    // Executes when a player takes damage.
+    //
+    // Alias for event `damage`.
+    PlayerDamage,
+
+    // Executes when a player attempts to breaks a block in the plot.
+    //
+    // This event does not run if a player successfully breaks a block due to build permissions.
+    //
+    // Alias for event `blockBreak`.
+    PlayerBlockBreak,
+
+    // Executes when a player starts doing parkour.
+    //
+    // Alias for event `startParkour`.
+    StartParkour,
+
+    // Executes when a player successfully completes the parkour.
+    //
+    // Alias for event `completeParkour`.
+    CompleteParkour,
+
+    // Executes when a player drops an item.
+    //
+    // Alias for event `dropItem`.
+    PlayerDropItem,
+
+    // Executes when a player picks up an item.
+    //
+    // Alias for event `pickUpItem`.
+    PlayerPickIpItem,
+
+    // Executes when a player changes their held item slot.
+    //
+    // Alias for event `changeHeldItem`.
+    PlayerChangeHeldItem,
+
+    // Executes when a player toggles sneak.
+    //
+    // Alias for event `toggleSneak`.
+    PlayerToggleSneak,
+
+    // Executes when a player toggles flight.
+    //
+    // Alias for event `toggleFlight`.
+    PlayerToggleFlight:
+}

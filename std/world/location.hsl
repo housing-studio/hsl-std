@@ -1,0 +1,24 @@
+// Represents a 3-dimensional point in the space of the house.
+//
+// see [teleport](/std/actions#teleport)
+enum Location {
+    // The static spawn location of the house.
+    //
+    // Assigned via command `/setspawn`.
+    Spawn,
+
+    // The location of the player that invoked the action. 
+    //
+    // Resolved dynamically for the player when the underlying action runs.
+    Invoker,
+
+    // The current location of the player that is setting up the action.
+    //
+    // Resolved dynamically for the player that sets up the action.
+    Current,
+
+    // A custom 3D position in the house, where each coordinate represents the expected XYZ position.
+    //
+    // Resolved statically during compile time.
+    Custom(x: double, y: double, z: double)
+}

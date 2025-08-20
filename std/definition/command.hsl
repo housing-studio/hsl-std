@@ -1,0 +1,89 @@
+// Represents a command definition within a housing system.
+//
+// # Example usage:
+// ```hsl
+// @executor(Executor::Targeted)
+// @priority(3)
+// @listed(true)
+// command myCommand() {
+//     chat("Hello, World!")
+// }
+// ```
+@allow(executor, priority, listed)
+struct Command {
+    // The unique name of the command.
+    //
+    // Exposed as `/name`.
+    name: string
+
+    // The target player of the command to execute against.
+    //
+    // * self - the command executor is the target
+    // * targetted - the provided argument is the target
+    target: Executor = Executor::Self
+
+    // Change the required priority so only players in a group with a priority equal or higher can use the command.
+    //
+    // If the priority is `0`, then anyone can use the command.
+    requiredGroupPriority: int = 0
+
+    // Whether this command should be listed to players in command tab completion. 
+    //
+    // Commands will only be listed for players who have the required group priority.
+    listed: bool = true
+}
+
+// Represents an annotation that sets the short description of a command.
+//
+// # Example usage:
+// ```hsl
+// @executor(Executor::Self)
+// command spawn() {
+//     teleport(Location::Spawn)
+// }
+//
+// @executor(Executor::Targeted)
+// command jail() {
+//     teleport(JAIL_LOCATION)
+// }
+// ```
+@expose("executor")
+struct CommandTarget(target: Executor) : Annotation<Command> {
+    fn apply(cmd: Command) {
+        cmd.target = target
+    }
+}
+
+// Represents an annotation that sets the required group priority of a command.
+//
+// # Example usage:
+// ```hsl
+// @priority(2)
+// command vip() {
+//     chat("you are very special")
+// }
+// ```
+@expose("priority")
+struct CommandPriority(priority: int) : Annotation<Command> {
+    fn apply(cmd: Command) {
+        cmd.requiredGroupPriority = priority
+    }
+}
+
+// Represents an annotation that sets whether a command should be listed for all players 
+// or only the ones with sufficient permissions.í
+//
+// # Example usage:
+// ```hsl
+// @priority(3)
+// @listed(false)
+// command supersecret() {
+//     chat(CLASSIFIED_MESSAGE)
+// }
+// ```
+@expose("listed")
+struct CommandVisibility(listed: bool) : Annotation<Command> {
+    fn apply(cmd: Command) {
+        cmd.listed = listed
+    }
+}

@@ -1,0 +1,8 @@
+// Represents a clientside player weather.
+enum Weather {
+    // Sunny clears all rain/storm.
+    Sunny,
+
+    // Raining starts rain/storm.
+    Raining
+}

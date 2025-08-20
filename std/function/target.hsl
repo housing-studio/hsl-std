@@ -1,0 +1,10 @@
+// Represents the target player of a function call.
+//
+// see [triggerFunction](/std/actions#triggerFunction)
+enum Target {
+    // Trigger the function against the player that is the target of the underlying function.
+    Self,
+
+    // Trigger the function against all online players in the house.
+    AllPlayers
+}
