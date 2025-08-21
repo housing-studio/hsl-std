@@ -17,6 +17,9 @@ struct Function {
     // The exposed unique name of the function.
     name: string
 
+    // The list of actions to be called when the function is triggered.
+    actions?: []Action = []
+
     // The short description for the function.
     description?: string = ""
 

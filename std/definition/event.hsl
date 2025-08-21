@@ -11,7 +11,7 @@ struct Event {
     type: EventType
 
     // The list of events to invoke when the event is triggered.
-    actions: []Action
+    actions?: []Action = []
 }
 
 // Represents a wrapper for all housing event types.

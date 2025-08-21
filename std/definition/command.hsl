@@ -16,21 +16,24 @@ struct Command {
     // Exposed as `/name`.
     name: string
 
+    // The list of actions to be triggered when the command is executed.
+    actions?: []Action = []
+
     // The target player of the command to execute against.
     //
     // * self - the command executor is the target
     // * targetted - the provided argument is the target
-    target: Executor = Executor::Self
+    target?: Executor = Executor::Self
 
     // Change the required priority so only players in a group with a priority equal or higher can use the command.
     //
     // If the priority is `0`, then anyone can use the command.
-    requiredGroupPriority: int = 0
+    requiredGroupPriority?: int = 0
 
     // Whether this command should be listed to players in command tab completion. 
     //
     // Commands will only be listed for players who have the required group priority.
-    listed: bool = true
+    listed?: bool = true
 }
 
 // Represents an annotation that sets the short description of a command.
