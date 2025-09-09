@@ -1,0 +1,62 @@
+// The double value that is closer than any other to **pi**, the ratio of the circumference of a circle to its diameter.
+const PI = 3.141592653589793;
+
+// The double value that is closer than any other to **e**, the base of the natural logarithms.
+const E = 2.718281828459045;
+
+// Compute the absolute value of a number value.
+macro abs<T : number>(t: T) {
+    if (t < 0) {
+        return -t
+    } else {
+        return t
+    }
+}
+
+// Compiute the smaller of two number values.
+macro min<T : number>(a: T, b: T) {
+    if (a < b) {
+        return a
+    } else {
+        return b
+    }
+}
+
+// Compute the greater of two double values.
+macro max<T : number>(a: T, b: T) {
+    if (a > b) {
+        return a
+    } else {
+        return b
+    }
+}
+
+// Compute the trigonometric sine of an angle.
+@native
+macro sin(x: double) -> double
+
+// Compute the trigonometric cosine of an angle.
+@native
+macro cos(x: double) -> double
+
+// Compute the correctly rounded positive square root of a double value.
+@native
+macro sqrt(x: double) -> double
+
+// Compute the smallest (closest to negative infinity) double value that is greater than or equal to the 
+// argument and is equal to a mathematical integer.
+@native
+macro ceil(x: double) -> double
+
+// Compute the largest (closest to positive infinity) double value that is less than or equal to the 
+// argument and is equal to a mathematical integer.
+@native
+macro floor(x: double) -> double
+
+// Compute the value of the first argument raised to the power of the second argument.
+@native
+macro pow(base: double, exponent: double) -> double
+
+// Compute the closest int to the argument, with ties rounding to positive infinity.
+@native
+macro round(x: double) -> int
