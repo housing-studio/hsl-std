@@ -12,7 +12,8 @@ fn hasGroup(group: string, higher: bool = false) -> bool
 // * `comparator` - the comparator operator to compare the variable and the value with
 // * `fallback` - the value to use instead of the variable, if the variable is not set
 fn compareVariable(
-    namespace: Namespace, variable: string, value: any, comparator: Comparator = Comparator::Equal, fallback: any = null,
+    namespace: Namespace, variable: string, value: any, comparator: Comparator = Comparator::Equal, 
+    fallback: any = null,
 ) -> bool
 
 // Requires players to have a specific permission.
@@ -32,7 +33,8 @@ fn withinRegion(region: string) -> bool
 // * `target` - the target on the inventory to check for
 // * `amount` - the required amount of the material
 fn hasItem(
-    item: Material, comparator: ItemComparator = ItemComparator::Metadata, target: ComparatorTarget = ComparatorTarget::Anywhere, 
+    item: Material, comparator: ItemComparator = ItemComparator::Metadata, 
+    target: ComparatorTarget = ComparatorTarget::Anywhere, 
     amount: ComparatorAmount = ComparatorAmount::Any
 ) -> bool
 
@@ -78,7 +80,9 @@ fn hasGameMode(gameMode: GameMode) -> bool
 // * `placeholder` - the name of the placeholder to compare
 // * `value` - the value to compare to
 // * `comparator` - the comparator for the placeholder value and required value
-fn comparePlaceholder(placeholder: string, value: any, comparator: Comparator = Comparator::Equal) -> bool
+fn comparePlaceholder(
+    placeholder: string, value: any, comparator: Comparator = Comparator::Equal
+) -> bool
 
 // Requires players to match the required team.
 //

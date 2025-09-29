@@ -1,13 +1,35 @@
+// Represents a set of rules applied for a region.
 enum Flag {
+    // Enables PvP between online players.
     Pvp,
+
+    // Enables double jumps by pressing jump key twice.
     DoubleJump,
+
+    // Enables damage caused by fire tick.
     FireDamage,
+
+    // Enables damage caused by falling from a high distance.
     FallDamage,
+
+    // Enables damage caused by poison potion effect.
     PoisonDamage,
+
+    // Enables damage caused by suffocating inside blocks.
     Suffocation,
+
+    // Enables damage caused by low hunger level.
     Hunger,
+
+    // Enables natural health regeneration.
     NaturalRegeneration,
+
+    // Enables kill and death messages to be broadcasted upon killing another player.
     DeathMessages,
+
+    // Forces players to instantly respawn upon death.
     InstantRespawn,
+
+    // Allows the player to keep the contents of their inventory upon death.
     KeepInventory
 }

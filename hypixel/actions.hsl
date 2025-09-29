@@ -4,7 +4,10 @@
 // * `matchAny` - `true` if only one conditions needs to meet, `false` if all conditions are needed
 // * `ifActions` - the list of actions to invoke if the conditional evaluates to `true`
 // * `elseActions` - the list of actions to invoke if the conditional evaluates to `false`
-fn conditional(conditions: []Condition, matchAny: bool = false, ifActions: []Action = [], elseActions: []Action = [])
+fn conditional(
+    conditions: []Condition, matchAny: bool = false, ifActions: []Action = [], 
+    elseActions: []Action = []
+)
 
 // Change the group of the player.
 //
@@ -55,7 +58,10 @@ fn parkourCheckpoint()
 // * `allowMultiple` - whether to allow obtaining multiple items of the same kind
 // * `slot` - the slot of the inventory to add the item to
 // * `replace` - whether to attempt to replace an existing item in the inventory for the same kind
-fn giveItem(item: Material, allowMultiple: bool = false, slot: Slot = Slot::FirstAvailable, replace: bool = false)
+fn giveItem(
+    item: Material, allowMultiple: bool = false, slot: Slot = Slot::FirstAvailable, 
+    replace: bool = false
+)
 
 // Remove an item from the player's inventory.
 // 
@@ -75,7 +81,9 @@ fn chat(message: string)
 // * `level` - the amplifier of the effect
 // * `override` - whether to override an existing effect of the same kind
 // * `showIcon` - whether to show the potion icon in the top right of the Minecraft client for players in 1.9 or later
-fn addEffect(effect: Effect, duration: int = 60, level: int = 1, override: bool = false, showIcon: bool = true)
+fn addEffect(
+    effect: Effect, duration: int = 60, level: int = 1, override: bool = false, showIcon: bool = true
+)
 
 // Clear all potions effects of the player.
 fn clearEffects()
@@ -97,7 +105,10 @@ fn sendToLobby(lobby: Lobby = Lobby::Housing)
 // * `mode` - the mode of the variable change
 // * `value` - the value of the variable change
 // * `autoUnset` - whether to eventually automatically unset the variable
-fn changeVariable(namespace: Namespace, variable: string, mode: Mode::Set = Mode::Set, value: any = 1, autoUnset: bool = false)
+fn changeVariable(
+    namespace: Namespace, variable: string, mode: Mode::Set = Mode::Set, value: any = 1, 
+    autoUnset: bool = false
+)
 
 // Teleport the player to the specified location.
 //
@@ -116,7 +127,9 @@ fn failParkour(reason: string = "Failed!")
 // * `volume` - the volume of the sound to be played
 // * `pitch` - the pitch of the sound to be played
 // * `location` - the location of the sound to be played at
-fn playSound(sound: Sound, volume: float = 0.7, pitch: float = 1.0, location: Location = Location::Invoker)
+fn playSound(
+    sound: Sound, volume: float = 0.7, pitch: float = 1.0, location: Location = Location::Invoker
+)
 
 // Set the target location of the compass for a player.
 //
@@ -178,8 +191,8 @@ fn setTeam(team: string)
 // * `prioritizePlayers` - when enabled, the player the action is executed on will be prioritized for picking up the item
 // * `fallbackToInventory` - when enabled, items will be put into the player inventory if they cannot be dropped in the world
 fn dropItem(
-    item: Material, location: Location, naturally: bool = true, disableMerging: bool = false, prioritizePlayers: bool = false, 
-    fallbackToInventory: bool = false
+    item: Material, location: Location, naturally: bool = true, disableMerging: bool = false, 
+    prioritizePlayers: bool = false, fallbackToInventory: bool = false
 )
 
 // Change the direction of the player.

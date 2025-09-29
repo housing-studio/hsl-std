@@ -1,52 +1,152 @@
+// Represents a set of permissions that may be granted for specific groups.
 enum Permission {
+    // Allows players to toggle flight by double tapping the jump key.
     Fly,
+
+    // Allows players to interact with wooden doors.
     WoodDoor,
+
+    // Allows players to interact with iron doors.
     IronDoor,
+
+    // Allows players to interact with wooden trapdoors.
     WoodTrapDoor,
+
+    // Allows players to interact with iron trapdoors.
     IronTrapDoor,
+
+    // Allows players to interact with fence gates.
     FenceGate,
+
+    // Allows players to press wooden and stone buttons.
     Button,
+
+    // Allows players to pull on levers.
     Lever,
+
+    // Allows players to be launched up by launch pads.
     UseLaunchPads,
+
+    // Allows players to use the `/tp` command to teleport to other players.
     Teleport,
+
+    // Allows players to teleport other players to themselves.
     TeleportOthers,
+
+    // Allows players to play music using the jukebox.
     Jukebox,
+
+    // Allows players to disconnect players from the house.
     Kick,
+
+    // Allows players to use permanently remove players from the house.
     Ban,
+
+    // Allows players disallow other players from sending messages in the chat.
     Mute,
+
+    // Allows players to spawn their pets in the house.
     PetSpawning,
+
+    // Allows players to build and break blocks while the house owner is online.
     Build,
+
+    // Allows players to build and break blocks even when the house owner is offline.
     OfflineBuild,
+
+    // Allows players to place fluids like water and lava in the house.
     Fluid,
+
+    // Allows players to use pro tools commands such as `/set` and `/copy`.
     ProTools,
+
+    // Allows players to interact with chests.
     UseChests,
+
+    // Allows players to interact with ender chests.
     UseEnderChests,
+
+    // Allows players to use the item editor to modify the properties of held items.
     ItemEditor,
+
+    // Allows players to switch between game modes.
     SwitchGameMode,
+
+    // Allows players to manually modify variable values.
     EditVariables,
+    
+    // Allows players to change the group of other players.
     ChangePlayerGroup,
+
+    // Allows players to change the house's game rules.
     ChangeGameRules,
+
+    // Allows players to access the housing menu to get special blocks and edit house systems.
     HousingMenu,
+
+    // Allows players to inspect the team chats.
     TeamChatSpy,
+
+    // Allows players to edit actions in the housing menu.
     EditActions,
+
+    // Allows players to edit regions in the housing menu.
     EditRegions,
+
+    // Allows players to edit the scoreboard in the housing menu.
     EditScoreboard,
+
+    // Allows players to edit event actions in the housing menu.
     EditEventActions,
+
+    // Allows players to edit commands in the housing menu.
     EditCommands,
+
+    // Allows players to edit functions in the housing menu.
     EditFunctions,
+
+    // Allows players to edit inventory layouts in the housing menu.
     EditInventoryLayouts,
+
+    // Allows players to edit teams in the housing menu.
     EditTeams,
+
+    // Allows players to edit custom menus in the housing menu.
     EditCustomMenus,
+
+    // Allows players to view the analytics overview of the house.
     ViewAnalytics,
+
+    // Allow players to obtain the mailbox item.
     ItemMailbox,
+
+    // Allow players to obtain the egghunt item.
     ItemEggHunt,
+
+    // Allow players to obtain the teleport pad item.
     ItemTeleportPad,
+
+    // Allow players to obtain the launch pad item.
     ItemLaunchPad,
+
+    // Allow players to obtain the action pad item.
     ItemActionPad,
+
+    // Allow players to obtain the hologram item.
     ItemHologram,
+
+    // Allow players to obtain the NPC item.
     ItemNPC,
+
+    // Allow players to obtain the action button item.
     ItemActionButton,
+
+    // Allow players to obtain the leaderboard item.
     ItemLeaderboard,
+
+    // Allow players to obtain the trash can item.
     ItemTrashCan,
+
+    // Allow players to obtain the biome stick item.
     ItemBiomeStick
 }

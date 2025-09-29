@@ -1,4 +1,8 @@
+// Represents the target player that a command should be invoked against.
 enum Executor {
+    // Executes the command against the player that invoked the command.
     Self,
+
+    // Executes the command against the player that was the argument input for the command invocation.
     Targeted
 }

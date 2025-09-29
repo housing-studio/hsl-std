@@ -1,5 +1,13 @@
+// Represents a registry of function stat namespaces.
+//
+// Namespaces decide who is the owner of a given stat.
 enum Namespace {
+    // Player-bound namespace holds per-player stats, meaning the stat value will be unique for each player.
     Player,
+
+    // Team-bound namespace holds per-team stats, meaning that the value will be shared across team members.
     Team,
+
+    // Global namespace holds global stats, meaning the value will be shared across all online players.
     Global
 }

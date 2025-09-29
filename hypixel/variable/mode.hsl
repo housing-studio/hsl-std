@@ -1,7 +1,17 @@
+// Represents a variable modifier.
 enum Mode {
+    // Assign the underlying variable to the specified value.
     Set,
+
+    // Increment the underlying variable by the specified amount.
     Increment,
+
+    // Decrement the underlying variyble by the specified amount.
     Decrement,
+
+    // Multiply the underlying variyble by the specified amount.
     Multiply,
+
+    // Divide the underlying variyble by the specified amount.
     Divide
 }

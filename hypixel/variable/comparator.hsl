@@ -1,7 +1,17 @@
+// Represents a variable-value comparator.
 enum Comparator {
+    // Check if the variable's value is less than the specified value.
     LessThan,
+
+    // Check if the variable's value is less than or equal to the specified value.
     LessThanOrEqual,
+
+    // Check if the variable's value is equal to the specified value.
     Equal,
+
+    // Check if the variable's value is greater than or equal to the specified value.
     GreaterThanOrEqual,
+
+    // Check if the variable's value is greater than to the specified value.
     GreaterThan
 }

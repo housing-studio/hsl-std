@@ -1,26 +1,73 @@
+// Represents a set of special enchantments that can be applied for held items.
 // see [enchantHeldItem](/std/actions#enchantHeldItem)
 enum Enchant {
+    // Reduces generic damage.
     Protection,
+
+    // Adds for damage reduction. Largest of first in armor for duration reduction.
     FireProtection,
+
+    // Reduces fall damage.
     FeatherFalling,
+    
+    // Reduces explosion damage and knockback.
     BlastProtection,
+
+    // Reduces damage from projectiles.
     ProjectileProtection,
+
+    // Extends underwater breathing time.
     Respiration,
+
+    // Increases underwater mining speed.
     AquaAffinity,
+
+    // Taking damage causes the attacker to also take damage.
     Thorns,
+
+    // Increases underwater movement speed.
     DepthStrider,
+
+    // Increases melee damage.
     Sharpness,
+
+    // Increases damage to the undead.
     Smite,
+
+    // Increases damage and applies Slowness IV to arthropod mobs 
+    // (spiders, cave spiders, silverfish, endermites and bees).
     BaneOfArthropods,
+
+    // Increases knockback.
     Knockback,
+
+    // Sets target on fire.
     FireAspect,
+
+    // Increases mob loot.
     Looting,
+
+    // Increases tool speed, as well as the chance for axes to disable shields.
     Efficiency,
+
+    // Mined blocks drop themselves.
     SilkTouch,
+
+    // Reduces durability damage.
     Unbreaking,
+
+    // Increases the amount of block drops.
     Fortune,
+
+    // Increases arrow damage.
     Power,
+
+    // Increases arrow knockback.
     Punch,
+
+    // Arrows shot are ignited and deal fire damage to the target.
     Flame,
+
+    // Prevents consumption of normal arrows (tipped arrows and spectral arrows are consumed).
     Infinity
 }

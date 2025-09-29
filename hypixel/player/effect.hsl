@@ -1,24 +1,75 @@
+// Represents a registry of applicable Minecraft potion effects.
 enum Effect {
+    // Increases walking speed; higher levels make the affected entity faster and increases the 
+    // player's field of view when affected.
     Speed,
+
+    // Decreases walking speed; higher levels make the affected entity slower and decreases the 
+    // player's field of view when affected.
     Slowness,
+
+    // Increases mining and attack speed, higher levels increase the player's mining and attack speed.
     Haste,
+
+    // Decreases mining and attack speed, higher levels decrease the player's mining and attack speed.
     MiningFatigue,
+
+    // Increases melee damage, higher levels make the affected entity do more melee damage.
     Strength,
+
+    // Heals living entities, damages undead, higher levels heal more health and do more damage.
     InstantHealth,
+
+    // Damages living entities, heals undead, higher levels do more damage and heal more health.
     InstantDamage,
+
+    // Increases jump height and reduces fall damage, higher levels make the affected entity 
+    // jump higher and reduces more fall damage.
     JumpBoost,
+
+    // Wobbles and warps the screen.
     Nausea,
+
+    // Regenerates health over time, higher levels make health regenerate quicker.
     Regeneration,
+
+    // Reduces damage, higher levels reduce more damage.
     Resistance,
+
+    // Prevents the affected entity from taking damage due to Fire, lava and other sources of fire damage.
     FireResistance,
+
+    // Prevents drowning and lets the affected entity breathe underwater.
     WaterBreathing,
+
+    // Grants invisibility, making the affected entity invisible (but not the item they hold or 
+    // the armor they wear), and reduces other mobs' detection range for the affected entity,
+    // higher levels reduce other mobs' detection range more.
     Invisibility,
+
+    // Impairs vision and disables the ability to sprint and critical hit.
     Blindness,
+
+    // Lets the player see well in darkness and underwater.
     NightVision,
+
+    // Increases food exhaustion, higher levels cause the player to starve quicker.
     Hunger,
+
+    // Decreases melee damage, higher levels decrease more melee damage.
     Weakness,
+
+    // Inflicts damage over time (but can't kill), higher levels do more damage per second, 
+    // doesn't affect undead.
     Poison,
+
+    // Inflicts damage over time (can kill), higher levels do more damage per second.
     Wither,
+
+    // Increases maximum health, higher levels give the affected entity more maximum health.
     HealthBoost,
+
+    // Adds damage absorption (additional hearts that can't be regenerated), 
+    // higher levels give more absorption.
     Absorption
 }

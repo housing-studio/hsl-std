@@ -20,10 +20,12 @@ struct Region {
     exitActions: []Action
 }
 
-// if a setting is enabled, then the region will force enable the flag
-// if a setting is disabled, then the region will force disable the flag
-// if a setting is unset, then the global/parent flag will be used
-// by default all settings are unset
+// Represents a container of toggled settings that may be applied for a region.
+// 
+// * If a setting is enabled, then the region will force enable the flag.
+// * If a setting is disabled, then the region will force disable the flag.
+// * If a setting is unset, then the global/parent flag will be used.
+// * By default all settings are unset.
 struct PvpSettings {
     // Whether to allow PvP or taking damage in general.
     pvpOrDamage?: Property = Property::Unset

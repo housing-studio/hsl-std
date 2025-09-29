@@ -1,1 +1,2 @@
+// Represents a 3-dimensional vector.
 struct Vector(x: double, y: double, z: double)

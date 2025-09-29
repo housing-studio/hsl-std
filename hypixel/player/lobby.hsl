@@ -1,22 +1,62 @@
+// Represents a set of lobbies that the player can be sent to.
 enum Lobby {
+    // The main lobby of the Hypixel Network.
     Main,
+
+    // The Tournament Hall lobby of the Hypixel Network.
     TournamentHall,
+
+    // The BlitzSG lobby of the Hypixel Network.
     BlitzSG,
+
+    // The TNT Games lobby of the Hypixel Network.
     TheTNTGames,
+
+    // The MegaWalls lobby of the Hypixel Network.
     MegaWalls,
+
+    // The Arcade Games lobby of the Hypixel Network.
     ArcadeGames,
+
+    // The Cops and Crims lobby of the Hypixel Network.
     CopsAndCrims,
+
+    // The UHC Champions lobby of the Hypixel Network.
     UHCChampions,
+
+    // The Warlords lobby of the Hypixel Network.
     Warlords,
+
+    // The Smash Heroes lobby of the Hypixel Network.
     SmashHeroes,
+
+    // The Housing lobby of the Hypixel Network.
     Housing,
+
+    // The Sky Wars lobby of the Hypixel Network.
     SkyWars,
+
+    // The Speed UHC lobby of the Hypixel Network.
     SpeedUHC,
+
+    // The Classic Games lobby of the Hypixel Network.
     ClassicGames,
+
+    // The Prototype lobby of the Hypixel Network.
     Prototype,
+    
+    // The Bed wars lobby of the Hypixel Network.
     BedWars,
+
+    // The Murder Mystery lobby of the Hypixel Network.
     MurderMystery,
+    
+    // The Build Battle lobby of the Hypixel Network.
     BuildBattle,
+    
+    // The Duels lobby of the Hypixel Network.
     Duels,
+    
+    // The Wool Wars lobby of the Hypixel Network.
     WoolWars
 }
