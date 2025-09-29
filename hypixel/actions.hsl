@@ -1,3 +1,9 @@
+// Invoke a set of actions if and only if the specific conditions meet.
+//
+// * `conditions` - the list of conditions to meet
+// * `matchAny` - `true` if only one conditions needs to meet, `false` if all conditions are needed
+// * `ifActions` - the list of actions to invoke if the conditional evaluates to `true`
+// * `elseActions` - the list of actions to invoke if the conditional evaluates to `false`
 fn conditional(conditions: []Condition, matchAny: bool = false, ifActions: []Action = [], elseActions: []Action = [])
 
 // Change the group of the player.
@@ -214,5 +220,5 @@ fn openMenu(menu: string)
 // Close the currently open menu of the player.
 fn closeMenu()
 
-// Stops executing the remaining actions.
+// Stop executing the remaining actions.
 fn exit()
