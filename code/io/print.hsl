@@ -1,0 +1,33 @@
+// Prints a value to the standard output **with a newline** at the end.
+// Automatically converts the value to string using its string representation.
+//
+// # Example usage:
+// ```hsl
+// println!("Hello, World!")
+// println!(123)
+// ```
+// Output:
+// ```text
+// Hello, World!
+// 123
+// ```
+//
+// * `o` - the value to print to stdout followed by a new line
+macro println(o: any)
+
+// Prints a value to the standard output **without a newline**.
+// Useful for inline output, progress updates, or building formatted text manually.
+// Automatically converts the value to string using its string representation.
+//
+// # Example usage:
+// ```hsl
+// print!("Hello, ")
+// print!("World!")
+// ```
+// Output:
+// ```text
+// Hello, World!
+// ```
+//
+// * `o` - the value to print to stdout
+macro print(o: any)
