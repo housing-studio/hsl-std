@@ -50,8 +50,7 @@ struct Command {
 //     teleport(JAIL_LOCATION)
 // }
 // ```
-@expose("executor")
-struct CommandTarget(target: Executor) : Annotation<Command> {
+struct executor(target: Executor) : Annotation<Command> {
     fn apply(cmd: Command) {
         cmd.target = target
     }
@@ -66,8 +65,7 @@ struct CommandTarget(target: Executor) : Annotation<Command> {
 //     chat("you are very special")
 // }
 // ```
-@expose("priority")
-struct CommandPriority(priority: int) : Annotation<Command> {
+struct priority(priority: int) : Annotation<Command> {
     fn apply(cmd: Command) {
         cmd.requiredGroupPriority = priority
     }
@@ -84,8 +82,7 @@ struct CommandPriority(priority: int) : Annotation<Command> {
 //     chat(CLASSIFIED_MESSAGE)
 // }
 // ```
-@expose("listed")
-struct CommandVisibility(listed: bool) : Annotation<Command> {
+struct listed(listed: bool) : Annotation<Command> {
     fn apply(cmd: Command) {
         cmd.listed = listed
     }

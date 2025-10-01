@@ -35,24 +35,21 @@ struct Function {
 }
 
 // Represents an annotation that sets the short description of a function.
-@expose("description")
-struct FunctionDescription(description: string) : Annotation<Function> {
+struct description(description: string) : Annotation<Function> {
     fn apply(f: Function) {
         f.description = description
     }
 }
 
 // Represents an annotation that sets the icon of the function that is displayed in the systems menu.
-@expose("icon")
-struct FunctionIcon(icon: Material) : Annotation<Function> {
+struct icon(icon: Material) : Annotation<Function> {
     fn apply(f: Function) {
         f.icon = icon
     }
 }
 
 // Represents an annotation that enables the function to loop automatically for each players at the specified interval.
-@expose("loop")
-struct FunctionLoop(ticks: int) : Annotation<Function> {
+struct loop(ticks: int) : Annotation<Function> {
     fn apply(f: Function) {
         f.automaticExecution = ticks
     }
