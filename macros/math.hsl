@@ -32,9 +32,13 @@ macro max<T : number>(a: T, b: T) {
 }
 
 // Compute the trigonometric sine of an angle.
+//
+// * `x` - an angle, in radians
 macro sin(x: float) -> float
 
 // Compute the trigonometric cosine of an angle.
+//
+// * `x` - n angle, in radians
 macro cos(x: float) -> float
 
 // Compute the correctly rounded positive square root of a float value.
@@ -49,7 +53,25 @@ macro ceil(x: float) -> float
 macro floor(x: float) -> float
 
 // Compute the value of the first argument raised to the power of the second argument.
+//
+// * `base` - the base number
+// * `exponent` - the value to raise the base to
 macro pow(base: float, exponent: float) -> float
 
 // Compute the closest int to the argument, with ties rounding to positive infinity.
+//
+// * `x` - a floating-point value to be rounded to an integer
 macro round(x: float) -> int
+
+// Convert an angle measured in degrees to an approximately equivalent angle measured in radians. 
+// The conversion from degrees to radians is generally inexact.
+//
+// * `deg` -  an angle, in degrees
+macro rad(deg: float) -> float
+
+// Convert an angle measured in radians to an approximately equivalent angle measured in degrees.  
+// The conversion from radians to degrees is generally inexact; users should
+// **not** expect `cos(rad(90.0))` to exactly equal `0.0`0.0.
+//
+// * `rad` - an angle, in radians
+macro deg(rad: float) -> float
