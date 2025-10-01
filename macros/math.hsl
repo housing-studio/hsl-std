@@ -52,5 +52,4 @@ macro floor(x: float) -> float
 macro pow(base: float, exponent: float) -> float
 
 // Compute the closest int to the argument, with ties rounding to positive infinity.
-@native
 macro round(x: float) -> int

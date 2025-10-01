@@ -2,9 +2,7 @@
 macro isNaN(x: float) -> bool
 
 // Returns `true` if this float value is infinitely large in magnitude, `false` otherwise.
-@native
 macro isInfinite(x: float) -> bool
 
 // Returns `true` if the argument is a finite floating-point value; returns `false` otherwise (for NaN and infinity arguments).
-@native
 macro isFinite(x: float) -> bool
