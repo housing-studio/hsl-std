@@ -1,0 +1,114 @@
+// Represents the absence of a value.
+// 
+// Used as the return type for functions that do not return anything.
+// Functions returning `void` perform actions but do not produce results.
+// 
+// # Example usage:
+// ```hsl
+// macro log(message: string) -> void {
+//     // log the message without returning anything
+// }
+// ```
+struct void {}
+
+// Represents a 32-bit signed integer.
+// 
+// Supports arithmetic (`+`, `-`, `*`, `/`, `%`) and comparison operations.
+// Immutable and passed by value.
+// 
+// # Example usage:
+// ```hsl
+// stat player a: int = 5
+// b = FOO * 2
+// ```
+struct int {}
+
+// Represents a 32-bit floating-point number.
+//
+// Supports arithmetic and comparison operations with fractional values.
+// Immutable and passed by value.
+//
+// # Example usage:
+// ```hsl
+// const PI = 3.14159
+// const RADIUS = 2.5
+// const AREA = PI * RADIUS * RADIUS
+// ```
+struct float {}
+
+// Represents a UTF-16 encoded string of characters.
+// 
+// Strings are immutable and support concatenation, slicing, and comparison.
+// 
+// # Example usage:
+// ```hsl
+// stat player name: string = "World"
+// chat($"Hello, {name}")
+// ```
+struct string {}
+
+// Represents a boolean value: `true` or `false`.
+// 
+// Commonly used in conditionals, loops, and logical expressions.
+// Supports logical operators: `!`, `&&`, `||`
+// 
+// # Example usage:
+// ```hsl
+// let isReady: bool = true
+// if (isReady) {
+//     start()
+// }
+// ```
+struct bool {}
+
+// Represents a value of any type.
+// 
+// Can hold any value, including primitives and user-defined types.
+// Useful for generics, dynamic containers, and runtime type inspection.
+// 
+// # Example usage:
+// ```hsl
+// let value: any = 42
+// value = "hello"
+// ```
+struct any {}
+
+// Represents the boolean constant `true`.
+//
+// Evaluates to the result of the expression `0 == 0`, which is always true.
+// Used to indicate truth or enable conditional execution.
+//
+// # Example usage:
+// ```hsl
+// if (true) {
+//     chat("This always runs.")
+// }
+// ```
+const true = 0 == 0
+
+// Represents the boolean constant `false`.
+// 
+// Evaluates to the result of the expression `0 == 1`, which is always false.
+// Used to indicate falsity or disable conditional execution.
+// 
+// # Example usage:
+// ```hsl
+// if (false) {
+//     chat("This never runs.")
+// }
+// ```
+const false = 0 != 0
+
+// Represents the "null" or "unset" value for any type.
+// 
+// This is the default uninitialized value for variables of type `any`.
+// Can be used to represent absence of data, failure, or optional values.
+// 
+// # Example usage:
+// ```hsl
+// let result: string = nil
+// if (result == nil) {
+//     chat("No value assigned.")
+// }
+// ```
+const nil = any(0)
