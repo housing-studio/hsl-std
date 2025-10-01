@@ -1,8 +1,8 @@
-// The double value that is closer than any other to **pi**, the ratio of the circumference of a circle to its diameter.
-const PI = 3.141592653589793;
+// The float value that is closer than any other to **pi**, the ratio of the circumference of a circle to its diameter.
+const PI = 3.141592653589793
 
-// The double value that is closer than any other to **e**, the base of the natural logarithms.
-const E = 2.718281828459045;
+// The float value that is closer than any other to **e**, the base of the natural logarithms.
+const E = 2.718281828459045
 
 // Compute the absolute value of a number value.
 macro abs<T : number>(t: T) {
@@ -22,7 +22,7 @@ macro min<T : number>(a: T, b: T) {
     }
 }
 
-// Compute the greater of two double values.
+// Compute the greater of two number values.
 macro max<T : number>(a: T, b: T) {
     if (a > b) {
         return a
@@ -37,14 +37,14 @@ macro sin(x: float) -> float
 // Compute the trigonometric cosine of an angle.
 macro cos(x: float) -> float
 
-// Compute the correctly rounded positive square root of a double value.
+// Compute the correctly rounded positive square root of a float value.
 macro sqrt(x: float) -> float
 
-// Compute the smallest (closest to negative infinity) double value that is greater than or equal to the 
+// Compute the smallest (closest to negative infinity) float value that is greater than or equal to the 
 // argument and is equal to a mathematical integer.
 macro ceil(x: float) -> float
 
-// Compute the largest (closest to positive infinity) double value that is less than or equal to the 
+// Compute the largest (closest to positive infinity) float value that is less than or equal to the 
 // argument and is equal to a mathematical integer.
 macro floor(x: float) -> float
 

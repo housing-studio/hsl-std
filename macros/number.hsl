@@ -1,7 +1,7 @@
-// Returns `true` if this double value is a Not-a-Number (NaN), `false` otherwise.
+// Returns `true` if this float value is a Not-a-Number (NaN), `false` otherwise.
 macro isNaN(x: float) -> bool
 
-// Returns `true` if this double value is infinitely large in magnitude, `false` otherwise.
+// Returns `true` if this float value is infinitely large in magnitude, `false` otherwise.
 @native
 macro isInfinite(x: float) -> bool
 
