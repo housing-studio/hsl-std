@@ -13,7 +13,7 @@ fn hasGroup(group: string, higher: bool = false) -> bool
 // * `fallback` - the value to use instead of the variable, if the variable is not set
 fn compareVariable(
     namespace: Namespace, variable: string, value: any, comparator: Comparator = Comparator::Equal, 
-    fallback: any = null,
+    fallback: any = nil,
 ) -> bool
 
 // Requires players to have a specific permission.

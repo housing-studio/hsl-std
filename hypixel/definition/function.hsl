@@ -24,14 +24,14 @@ struct Function {
     description?: string = ""
 
     // The icon of the function that is displayed on the systems menu.
-    icon?: Material = null
+    icon?: Material = nil
 
     // Functions can be enabled to automatically execute for all players in the house every X amount of ticks.
     // 
     // For example: 1 second is 20 ticks.
     // 
-    // If null, then looping is disabled.
-    automaticExecution:? int = null
+    // If nil, then looping is disabled.
+    automaticExecution:? int = nil
 }
 
 // Represents an annotation that sets the short description of a function.
