@@ -32,31 +32,25 @@ macro max<T : number>(a: T, b: T) {
 }
 
 // Compute the trigonometric sine of an angle.
-@native
-macro sin(x: double) -> double
+macro sin(x: float) -> float
 
 // Compute the trigonometric cosine of an angle.
-@native
-macro cos(x: double) -> double
+macro cos(x: float) -> float
 
 // Compute the correctly rounded positive square root of a double value.
-@native
-macro sqrt(x: double) -> double
+macro sqrt(x: float) -> float
 
 // Compute the smallest (closest to negative infinity) double value that is greater than or equal to the 
 // argument and is equal to a mathematical integer.
-@native
-macro ceil(x: double) -> double
+macro ceil(x: float) -> float
 
 // Compute the largest (closest to positive infinity) double value that is less than or equal to the 
 // argument and is equal to a mathematical integer.
-@native
-macro floor(x: double) -> double
+macro floor(x: float) -> float
 
 // Compute the value of the first argument raised to the power of the second argument.
-@native
-macro pow(base: double, exponent: double) -> double
+macro pow(base: float, exponent: float) -> float
 
 // Compute the closest int to the argument, with ties rounding to positive infinity.
 @native
-macro round(x: double) -> int
+macro round(x: float) -> int

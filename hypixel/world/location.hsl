@@ -20,5 +20,5 @@ enum Location {
     // A custom 3D position in the house, where each coordinate represents the expected XYZ position.
     //
     // Resolved statically during compile time.
-    Custom(x: double, y: double, z: double)
+    Custom(x: float, y: float, z: float)
 }

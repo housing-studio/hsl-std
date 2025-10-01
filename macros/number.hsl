@@ -1,11 +1,10 @@
 // Returns `true` if this double value is a Not-a-Number (NaN), `false` otherwise.
-@native
-macro isNaN(x: double) -> bool
+macro isNaN(x: float) -> bool
 
 // Returns `true` if this double value is infinitely large in magnitude, `false` otherwise.
 @native
-macro isInfinite(x: double) -> bool
+macro isInfinite(x: float) -> bool
 
 // Returns `true` if the argument is a finite floating-point value; returns `false` otherwise (for NaN and infinity arguments).
 @native
-macro isFinite(x: double) -> bool
+macro isFinite(x: float) -> bool
