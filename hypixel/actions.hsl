@@ -153,7 +153,8 @@ fn changeHealth(health: int = 20, mode: Mode = Mode::Set)
 // * `mode` - the mode of the hunger level change
 fn changeHunger(hunger: int = 20, mode: Mode = Mode::Set)
 
-fn randomAction(actions: []Action) // TODO
+// TODO decide whether to keep this eaction
+// fn randomAction(actions: []Action)
 
 // Trigger the specified function for the given target.
 //
@@ -223,7 +224,8 @@ fn toggleNameTagDisplay(shown: bool)
 
 // Cancel the execution of an event.
 // Only applies to a subset of events.
-fn cancelEvent() // TODO
+// TODO implement this action properly
+fn cancelEvent()
 
 // Display the specified menu for the player.
 //
