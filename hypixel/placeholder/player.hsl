@@ -180,7 +180,7 @@ struct Player {
     // * `teamName` - the name of the team
     //
     // Uses placeholder `%player.team.players/[team name]%`.
-    fn teamPlayers(team: string) -> int = placeholder!($"%player.team.players/{time}%")
+    fn teamPlayers(team: string) -> int = placeholder!($"%player.team.players/{team}%")
 
     // Retrieve the tick count of the player since started parkour.
     //

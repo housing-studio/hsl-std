@@ -21,19 +21,19 @@
 struct Stat {
     // Retrieve the value of the specified global stat.
     //
-    // Uses placeholder `%stat.player/<key> [fallback value]%`.
+    // Uses placeholder `%stat.global/<key> [fallback value]%`.
     //
     // * `key` - the unique name of the global stat
     // * `fallback` - the value to return if the stat is missing
-    fn global(key: string, fallback: any = "") -> any = placeholder!($"%stat.player/{key} {fallback}%")
+    fn global(key: string, fallback: any = "") -> any = placeholder!($"%stat.global/{key} {fallback}%")
 
     // Retrieve the value of the specified player stat.
     //
-    // Uses placeholder `%stat.global/<key> [fallback value]%`.
+    // Uses placeholder `%stat.player/<key> [fallback value]%`.
     //
     // * `key` - the unique name of the player stat
     // * `fallback` - the value to return if the stat is missing
-    fn player(key: string, fallback: any = "") -> any = placeholder!($"%stat.global/{key} {fallback}%")
+    fn player(key: string, fallback: any = "") -> any = placeholder!($"%stat.player/{key} {fallback}%")
 
     // Retrieve the value of the specified team stat.
     //
