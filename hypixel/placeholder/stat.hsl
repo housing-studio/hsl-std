@@ -1,0 +1,46 @@
+// HSL - Hypixel Script Language
+// Copyright (C) 2025 The HSL Authors
+//
+// This file is part of HSL.
+//
+// HSL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation.
+//
+// HSL is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+// Represents a struct that outputs house stat values based on namespaces and unique keys.
+//
+// See https://hypixel-housing.fandom.com/wiki/Placeholders.
+struct Stat {
+    // Retrieve the value of the specified global stat.
+    //
+    // Uses placeholder `%stat.player/<key> [fallback value]%`.
+    //
+    // * `key` - the unique name of the global stat
+    // * `fallback` - the value to return if the stat is missing
+    fn global(key: string, fallback: any = "") -> any = placeholder!($"%stat.player/{key} {fallback}%")
+
+    // Retrieve the value of the specified player stat.
+    //
+    // Uses placeholder `%stat.global/<key> [fallback value]%`.
+    //
+    // * `key` - the unique name of the player stat
+    // * `fallback` - the value to return if the stat is missing
+    fn player(key: string, fallback: any = "") -> any = placeholder!($"%stat.global/{key} {fallback}%")
+
+    // Retrieve the value of the specified team stat.
+    //
+    // Uses placeholder `%stat.team/<key> [team name] [fallback value]%`.
+    //
+    // * `key` - the unique name of the team stat
+    // * `team` - the name of the team that owns the stat
+    // * `fallback` - the value to return if the stat is missing
+    fn team(key: string, team: string = "", fallback: any = "") -> any = placeholder!($"%stat.team/{key} {team} {fallback}%")
+}

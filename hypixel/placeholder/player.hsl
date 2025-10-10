@@ -1,0 +1,194 @@
+// HSL - Hypixel Script Language
+// Copyright (C) 2025 The HSL Authors
+//
+// This file is part of HSL.
+//
+// HSL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation.
+//
+// HSL is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+// Represents a struct that outputs realtime information about the online player of the current execution context.
+//
+// See https://hypixel-housing.fandom.com/wiki/Placeholders.
+struct Player {
+    // Retrieve the player's in-game name.
+    //
+    // Uses placeholder `%player.name%`.
+    fn name() -> string = placeholder!("%player.name%")
+
+    // Retrieve the player's current ping in milliseconds.
+    //
+    // For example `30ms`.
+    //
+    // Uses placeholder `%player.ping%`.
+    fn ping() -> string = placeholder!("%player.ping%")
+
+    // Retrieve the player's current health.
+    //
+    // Uses placeholder `%player.health%`.
+    fn health() -> int = placeholder!("%player.health%")
+
+    // Retrieve the player's max health.
+    //
+    // Uses placeholder `%player.maxhealth%`.
+    fn maxHealth() -> int = placeholder!("%player.maxhealth%")
+    
+    // Retrieve the player's hunger level.
+    //
+    // Uses placeholder `%player.hunger%`.
+    fn hunger() -> int = placeholder!("%player.hunger%")
+    
+    // Retrieve the player's experience points.
+    //
+    // Uses placeholder `%player.experience%`.
+    fn experience() -> int = placeholder!("%player.experience%")
+
+    // Retrieve the player's experience level.
+    //
+    // Uses placeholder `%player.level%`.
+    fn level() -> int = placeholder!("%player.level%")
+
+    // Retrieve the player's X position.
+    //
+    // Uses placeholder `%player.pos.x%`.
+    fn posX() -> float = placeholder!("%player.pos.x%")
+
+    // Retrieve the player's Y position.
+    //
+    // Uses placeholder `%player.pos.y%`.
+    fn posY() -> float = placeholder!("%player.pos.y%")
+
+    // Retrieve the player's Z position.
+    //
+    // Uses placeholder `%player.pos.z%`.
+    fn posZ() -> float = placeholder!("%player.pos.z%")
+
+    // Retrieve the player's yaw rotation.
+    //
+    // This value represents the head's left/right angle.
+    //
+    // Uses placeholder `%player.pos.yaw%`.
+    fn yaw() -> float = placeholder!("%player.pos.yaw%")
+
+    // Retrieve the player's pitch rotation.
+    //
+    // This value represents the head's up/down angle.
+    //
+    // Uses placeholder `%player.pos.pitch%`.
+    fn pitch() -> float = placeholder!("%player.pos.pitch%")
+
+    // Retrieve the player's floored X position.
+    //
+    // Uses placeholder `%player.block.x%`.
+    fn blockX() -> int = placeholder!("%player.block.x%")
+
+    // Retrieve the player's floored Y position.
+    //
+    // Uses placeholder `%player.block.y%`.
+    fn blockY() -> int = placeholder!("%player.block.y%")
+
+    // Retrieve the player's floored Z position.
+    //
+    // Uses placeholder `%player.block.z%`.
+    fn blockZ() -> int = placeholder!("%player.block.z%")
+
+    // Retrieve the player's formatted game version.
+    //
+    // For example `1.19.4`.
+    //
+    // Uses placeholder `%player.version%`.
+    fn version() -> string = placeholder!("%player.version%")
+
+    // Retrieve the player's raw protocol version.
+    //
+    // For example `763`.
+    //
+    // Uses placeholder `%player.protocol%`.
+    fn protocol() -> int = placeholder!("%player.protocol%")
+
+    // Retrieve the player's current game mode.
+    //
+    // Uses placeholder `%player.gamemode%`.
+    fn gameMode() -> GameMode = placeholder!("%player.gamemode%")
+
+    // Retrieve the name of the region the player is currently within.
+    //
+    // If the player is not in a defined region, then `None` is returned.
+    //
+    // Uses placeholder `%player.region.name%`.
+    fn regionName() -> string = placeholder!("%player.region.name%")
+
+    // Retrieve the name of the player's current group.
+    //
+    // For example `Owner`.
+    //
+    // Uses placeholder `%player.group.name%`.
+    fn groupName() -> string = placeholder!("%player.group.name%")
+
+    // Retrieve the tag of the player's current group.
+    //
+    // For example `[Owner]`.
+    //
+    // Uses placeholder `%player.group.tag%`.
+    fn groupTag() -> string = placeholder!("%player.group.tag%")
+
+    // Retrieve the priority of the player's current group.
+    //
+    // For example `100`.
+    //
+    // Uses placeholder `%player.group.priority%`.
+    fn groupPriority() -> int = placeholder!("%player.group.priority%")
+
+    // Retrieve the color code of the player's current group.
+    // 
+    // For example `&e`.
+    //
+    // Uses placeholder `%player.group.color%`.
+    fn groupColor() -> string = placeholder!("%player.group.color%")
+
+    // Retrieve the name of the player's current team.
+    //
+    // For example `NO TEAM`.
+    //
+    // Uses placeholder `%player.team.name%`.
+    fn teamName() -> string = placeholder!("%player.team.name%")
+
+    // Retrieve the tag of the player's current team.
+    //
+    // For example `[Team]`.
+    //
+    // Uses placeholder `%player.team.tag%`.
+    fn teamTag() -> string = placeholder!("%player.team.tag%")
+
+    // Retrieve the color of the player's current team.
+    //
+    // For example `&c`.
+    //
+    // Uses placeholder `%player.team.color%`.
+    fn teamColor() -> string = placeholder!("%player.team.color%")
+
+    // Retrieve the count of players for a team.
+    //
+    // * `teamName` - the name of the team
+    //
+    // Uses placeholder `%player.team.players/[team name]%`.
+    fn teamPlayers(team: string) -> int = placeholder!($"%player.team.players/{time}%")
+
+    // Retrieve the tick count of the player since started parkour.
+    //
+    // Uses placeholder `%player.parkour.ticks%`.
+    fn parkourTicks() -> int = placeholder!("%player.parkour.ticks%")
+
+    // Retrieve the formatted stage of the player's parkour timer.
+    //
+    // Uses placeholder `%player.parkour.formatted%`.
+    fn parkourFormatted() -> string = placeholder!("%player.parkour.formatted%")
+}

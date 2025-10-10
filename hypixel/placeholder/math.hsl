@@ -1,0 +1,37 @@
+// HSL - Hypixel Script Language
+// Copyright (C) 2025 The HSL Authors
+//
+// This file is part of HSL.
+//
+// HSL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation.
+//
+// HSL is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+// Represents a struct that generates random values during runtime based on specified bounds.
+//
+// See https://hypixel-housing.fandom.com/wiki/Placeholders.
+struct Math {
+    // Generate a new random integer in the specified range.
+    //
+    // Uses placeholder `%random.int/<inclusive origin> <exclusive bound>%`.
+    //
+    // * `min` - the minimum of the bounds, inclusive
+    // * `max` - the maximum of the bounds, exlusive
+    fn randInt(min: int, max: int) -> int = placeholder!($"%random.int/{min} {max}%")
+
+    // Generate a new random float in the specified range.
+    //
+    // Uses placeholder `%random.decimal/<inclusive origin> <exclusive bound>%`.
+    //
+    // * `min` - the minimum of the bounds, inclusive
+    // * `max` - the maximum of the bounds, exlusive
+    fn randFloat(min: float, max: float) -> float = placeholder!($"%random.decimal/{min} {max}%")
+}

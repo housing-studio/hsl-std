@@ -1,0 +1,61 @@
+// HSL - Hypixel Script Language
+// Copyright (C) 2025 The HSL Authors
+//
+// This file is part of HSL.
+//
+// HSL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation.
+//
+// HSL is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+// Represents a struct that outputs realtime date information of the underlying machine's clock.
+//
+// See https://hypixel-housing.fandom.com/wiki/Placeholders.
+struct Date {
+    // Retrieve the current unix time in milliseconds.
+    //
+    // Uses placeholder `%date.unix.ms%`.
+    fn unixMillis() -> int = placeholder!("%date.unix.ms%")
+
+    // Retrieve the current unix time in seconds.
+    //
+    // Uses placeholder `%date.unix%`.
+    fn unixSeconds() -> int = placeholder!("%date.unix%")
+
+    // Retrieve the day of the month.
+    //
+    // Uses placeholder `%date.day/[timezone]%`.
+    fn day(timezone: string = "UTC") -> int = placeholder!($"%date.day/{timezone}%")
+
+    // Retrieve the month of the year.
+    //
+    // Uses placeholder `%date.month/[timezone]%`.
+    fn month(timezone: string = "UTC") -> int = placeholder!($"%date.month/{timezone}%")
+
+    // Retrieve the year number.
+    //
+    // Uses placeholder `%date.year/[timezone]%`.
+    fn year(timezone: string = "UTC") -> int = placeholder!($"%date.year/{timezone}%")
+
+    // Retrieve the current hour.
+    //
+    // Uses placeholder `%date.hour/[timezone]%`.
+    fn hour(timezone: string = "UTC") -> int = placeholder!($"%date.hour/{timezone}%")
+
+    // Retrieve the minutes of the current hour.
+    //
+    // Uses placeholder `%date.minute/[timezone]%`.
+    fn minute(timezone: string = "UTC") -> int = placeholder!($"%date.minute/{timezone}%")
+
+    // Retrieve the seconds of the current minute.
+    //
+    // Uses placeholder `%date.seconds/[timezone]%`.
+    fn seconds(timezone: string = "UTC") -> int = placeholder!($"%date.seconds/{timezone}%")
+}

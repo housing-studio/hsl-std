@@ -1,0 +1,52 @@
+// HSL - Hypixel Script Language
+// Copyright (C) 2025 The HSL Authors
+//
+// This file is part of HSL.
+//
+// HSL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License version 3
+// as published by the Free Software Foundation.
+//
+// HSL is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+// Represents a struct that outputs realtime information about the current house the player is in.
+//
+// See https://hypixel-housing.fandom.com/wiki/Placeholders.
+struct House {
+    // Retrieve the display name of the house.
+    //
+    // Uses placeholder `%house.name%`.
+    fn name() -> string = placeholder!("%house.name%")
+    
+    // Retrieve the number of online guests.
+    //
+    // This number is the count of online players exluding the owner.
+    //
+    // Uses placeholder `%house.guests%`.
+    fn guests() -> int = placeholder!("%house.guests%")
+
+    // Retrieve the number of total online players.
+    //
+    // This number is the count of online players including the owner.
+    // 
+    // Uses placeholder `%house.players%`.
+    fn players() -> int = placeholder!("%house.players%")
+
+    // Retrieve the house's current weekly cookie count.
+    //
+    // Uses placeholder `%house.cookies%`.
+    fn cookies() -> int = placeholder!("%house.cookies%")
+
+    // Retrieve the house's current visiting rule policy.
+    //
+    // For example `PUBLIC`.
+    //
+    // Uses placeholder `%house.visitingrules%`.
+    fn visitingRules() -> string = placeholder!("%house.visitingrules%")
+}
