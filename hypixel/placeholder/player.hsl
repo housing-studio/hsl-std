@@ -112,7 +112,7 @@ struct Player {
     // For example `763`.
     //
     // Uses placeholder `%player.protocol%`.
-    fn protocol() -> int = placeholder!("%player.protocol%")
+    fn protocol() -> Protocol = placeholder!("%player.protocol%")
 
     // Retrieve the player's current game mode.
     //
