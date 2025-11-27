@@ -37,5 +37,9 @@ enum Location {
     // A custom 3D position in the house, where each coordinate represents the expected XYZ position.
     //
     // Resolved statically during compile time.
-    Custom(x: float, y: float, z: float)
+    Pos(x: float, y: float, z: float)
+
+    // A custom 3D position and look direction in the house, where the components represents the expected XYZ position
+    // and the look vector.
+    PosLook(x: float, y: float, z: float, yaw: float, pitch: float)
 }
