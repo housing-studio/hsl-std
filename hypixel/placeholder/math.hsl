@@ -25,7 +25,7 @@ struct Math {
     //
     // * `min` - the minimum of the bounds, inclusive
     // * `max` - the maximum of the bounds, exlusive
-    fn randInt(min: int, max: int) -> int = placeholder!($"%random.int/{min} {max}%")
+    fn randInt(min: int, max: int) -> int = placeholder!($"%random.whole/{min} {max}%")
 
     // Generate a new random float in the specified range.
     //
