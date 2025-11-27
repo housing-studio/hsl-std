@@ -15,5 +15,18 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-// Represents a 3-dimensional vector.
-struct Vector(x: float, y: float, z: float)
+// Represents a 3-dimensional vector in Cartesian coordinates.
+//
+// A `Vector` stores three floating-point components: `x`, `y`, and `z`.
+//
+// This struct can be used for 3D geometry, physics calculations, or any application requiring 3D vector math.
+struct Vector {
+    // Create a new vector using the specified components.
+    //
+    // - `x`: the X component of the vector
+    // - `y`: the Y component of the vector
+    // - `z`: the Z component of the vector
+    //
+    // Returns a new `Vector` with the given `x`, `y`, and `z` components.
+    fn new(x: float, y: float, z: float) -> Vector
+}
